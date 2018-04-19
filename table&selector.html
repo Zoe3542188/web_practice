@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Try CSS LAYOUT</title>
+	<style type="text/css">
+		/*标签名称选择器*/
+		body{
+			font-size: 16px;font-family: "微软正黑体"
+		}
+		h3{
+			font-size: 24px; text-decoration: underline;
+		}
+		/*class选择器(.加名称)*/
+		div.content{
+				padding: 10px; border:1px dashed #888888;
+		}
+		/*id选择器(#加名称)*/
+		#btn{
+			border: 1px solid #888888;
+			background-color: #ffffff;padding: 5px;
+		}
+		/*虚拟选择器,搭配其他选择器使用（选择器：虚拟选择器*/
+		#btn:hover{
+				background-color: yellow;
+		}
+		/*:hover选择器，鼠标移动到按钮上时，style变为hover class中的内容;*/
+		input:focus{
+				border: 2px solid #ff0000;
+		}
+		/*阶乘式选择器，搭配其他选择器使用（选择器1 选择器2）选择器1包含选择器2*/
+		.favorite a{
+					color: green;
+		}
+		.dislike a{
+					color: yellow;
+		}
+		table{
+			width: 200px;
+			/*border: 1px solid #888888;
+			/*表格边线双线还是单线*/
+			border-collapse: collapse;
+		}
+		td{
+			border-bottom: 1px solid #888888; padding: 10px;
+		}
+		/*表格中第一对tr，虚拟选择器*/
+		tr:nth-child(1){
+			background-color: green;
+			color: white;
+		}
+		tr:nth-child(even){
+			background-color: #eacccc;
+		}
+	</style>
+</head>
+<body>
+	<h3>HELLO</h3>
+	<div class="content">新年好</div>
+	<h3>nihao</h3>
+	<ul class="favorite">
+		<li>hahhaha<a href="https://www.google.com">GOOGLE</a></li>
+		<li>heiheihei<a href="http://www.baidu.com">BAIDU</a></li>
+	</ul>
+	<h3>wohao</h3>
+	<ul class="dislike">
+		<li>hahhaha<a href="https://www.google.com">GOOGLE</a></li>
+		<li>heiheihei<a href="http://www.baidu.com">BAIDU</a></li>
+	</ul>
+	<h3>cloud</h3>
+	<div class="content">
+		<input style="padding: 5px;" type="text"/><button id="btn">you see</button>
+		<li class="favorite">heiheihei<a href="http://www.baidu.com">BAIDU</a></li>
+	</div>
+<br/>
+	<table>
+		<tr>
+			<td>球队</td>
+			<td>WIN</td>
+			<td>LOSE</td>
+		</tr>
+		<tr>
+			<td>NEWYORK</td>
+			<td>10</td>
+			<td>8</td>
+		</tr>
+		<tr>
+			<td>BOSTON</td>
+			<td>9</td>
+			<td>9</td>
+		</tr>
+		<tr>
+			<td>TORNTO</td>
+			<td>8</td>
+			<td>9</td>
+		</tr>
+	</table>
+</body>
+</html>
