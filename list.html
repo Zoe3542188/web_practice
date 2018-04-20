@@ -20,9 +20,21 @@
 		//JS注册事件处理器
 		function init(){
 			var btn=document.getElementById("btn");
-			var handler=function(){alert("click")}
+			var btid=document.getElementById("btid");
+			var handler=function(mouse){
+				alert(mouse.clientX+","+mouse.clientY)
+			}//取得当前点击的坐标
+			var Terry=function(){alert("I Love U")}
 			btn.addEventListener("click",handler);
+			btid.addEventListener("click",Terry);
+			//用户点击按钮，触发click事件
+			//浏览器主动收集和事件有关资讯
+			//浏览器制造出Event Object事件物件
+			//呼叫已经注册的事件处理函数（handler.Terry等）并将参数传进来handler(eventObj)
 		}
+		document.addEventListener("keydown",function(key){//注册匿名函数来直接当作事件处理器
+			alert(key.keyCode);
+		})
 	</script>
 	<style type="text/css">
 		.hide{display: none;}
@@ -51,5 +63,6 @@
 		<li>Drink Bubble Tea</li>
 		<li>Poo and Pee</li>
 	</ul>
+	<button id="btid">Terry</button>
 </body>
 </html>
