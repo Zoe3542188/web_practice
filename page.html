@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax 标签选单</title>
+	<script type="text/javascript">
+		function getData(name){
+			var req=new XMLHttpRequest();
+			req.open("get","http://127.0.0.1:8887/"+name);//获取网址
+			req.onload=function(){//触发load事件，侦测连线状态完成
+			//连线完成
+			var content=document.getElementById("content")
+			content.innerHTML=this.responseText;
+			};
+			req.send();//送出连线
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<span onclick="getData('js.html');">js</span>
+		<span onclick="getData('list.html');">list</span>
+		<span onclick="getData('layout.html')">layout</span>
+		<span onclick="getData('countdown.html')">countdown</span>
+	</div>
+	<hr/>
+	<div id="content"></div>
+</body>
+</html>
