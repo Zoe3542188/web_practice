@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>自动排程 schedule</title>
+	<script type="text/javascript">
+		var timer;
+		function init(){
+			timer=document.getElementById("timer")
+			//window.setTimeout(countdown,1000);//一秒后执行countdown
+			window.setInterval(countdown,1000)
+		}
+		function countdown(){
+			timer.innerHTML=timer.innerHTML-1;
+			if(timer.innerHTML>0){
+			window.setTimeout(countdown,1000);}
+			else{
+				document.location="https://github.com/Zoe3542188/web_practice"
+			}
+		}
+	</script>
+</head>
+<body onload="init();">
+	<span id="timer">10</span>
+</body>
+</html>
