@@ -17,12 +17,19 @@
 		function over(element){
 			element.style.color="green"
 		}
+		//JS注册事件处理器
+		function init(){
+			var btn=document.getElementById("btn");
+			var handler=function(){alert("click")}
+			btn.addEventListener("click",handler);
+		}
 	</script>
 	<style type="text/css">
 		.hide{display: none;}
 	</style>
 </head>
-<body>
+<body onload="init();">
+	<button id='btn'>注册事件</button>
 	<button onclick="alert('clicked!')">click</button>
 	<span onmouseover="this.style.color='blue'" onmouseout="this.style.color='red'">Test</span>
 	<span onmouseover="over(this)" onmouseout="out(this)">Hello</span>
