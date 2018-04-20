@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>select_list</title>
+	<script type="text/javascript">
+		function toggleMenu(idnum){
+			var menu=document.getElementById("menu-"+idnum);
+			/*if(menu.style.display=="none"){
+			menu.style.display="block"
+		}
+		else{menu.style.display="none"}*/
+			menu.classList.toggle("hide");//toggle是切换的意思
+		}
+		function out(element){
+			element.style.color="yellow"
+		}
+		function over(element){
+			element.style.color="green"
+		}
+	</script>
+	<style type="text/css">
+		.hide{display: none;}
+	</style>
+</head>
+<body>
+	<button onclick="alert('clicked!')">click</button>
+	<span onmouseover="this.style.color='blue'" onmouseout="this.style.color='red'">Test</span>
+	<span onmouseover="over(this)" onmouseout="out(this)">Hello</span>
+	<div onclick="toggleMenu(1)">what's next</div>
+	<ul id="menu-1" class="hide">
+		<li>Eat Chicken Dinner</li>
+		<li>Drink Bubble Tea</li>
+		<li>Poo and Pee</li>
+	</ul>
+	<div onclick="toggleMenu(2)">what's next</div>
+	<ul id="menu-2" class="hide">
+		<li>Eat Chicken Dinner</li>
+		<li>Drink Bubble Tea</li>
+		<li>Poo and Pee</li>
+	</ul>
+	<div onclick="toggleMenu(3)">what's next</div>
+	<ul id="menu-3" class="hide">
+		<li>Eat Chicken Dinner</li>
+		<li>Drink Bubble Tea</li>
+		<li>Poo and Pee</li>
+	</ul>
+</body>
+</html>
